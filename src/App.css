@@ -1,2 +1,38 @@
 
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing : border-box
+
+}
+
+:root {
+  --primary-color: #f72585;
+  --primary-dark: #b5179e;
+  --secondary-color: #4cc9f0;
+  --accent-color: #7209b7;
+  --text-color: #f0e6ff;
+  --light-text: #b8a3d1;
+  --background: #03071e;
+  --section-bg: #1a0933;
+  --card-bg: #240046;
+  --gradient-start: #f72585;
+  --gradient-end: #4cc9f0;
+  --nav-bg: rgba(3, 7, 30, 0.8);
+  --card-border: rgba(76, 201, 240, 0.1);
+}
+
+body {
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--background);
+}
+
+.app {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  width: 100%;
+  min-height: 100vh;
+}

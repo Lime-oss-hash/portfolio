@@ -49,21 +49,22 @@ export const Navbar = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a>Home</a>
+          <a href="#home" className="#hero" initial={{opacity: 0}} animate={{opacity: 1}}
+          transition={{duration: 0.8, delay: 0.2}}>Home</a>
         </motion.li>
         <motion.li
           variants={navItemVariants}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a>Projects</a>
+          <a href="#projects">Projects</a>
         </motion.li>
         <motion.li
           variants={navItemVariants}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a>Contact</a>
+          <a href="#contact">Contact</a>
         </motion.li>
       </motion.ul>
     </motion.nav>

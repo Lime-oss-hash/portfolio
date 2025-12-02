@@ -54,17 +54,20 @@ export const Projects = () => {
             className="project-image"
             style={{ backgroundImage: "url(/projects/project1.png)" }}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-          >
-          </motion.div>
+          ></motion.div>
           <div className="project-info">
-            <h3> SaaS Platform </h3>
+            <h3> TaskFlow Board </h3>
             <p>
-              A modern full-stack project management application built with Next.js 16, React 19, TypeScript, Supabase, and Clerk. Features drag-and-drop task management, real-time updates, and beautiful responsive UI.
+              Full-stack Kanban-style task management app built with Next.js 16, React 19, TypeScript, Supabase, Clerk, shadcn/ui, Tailwind, and dnd-kit.
+              Features authenticated dashboards, real-time board data, drag-and-drop columns/tasks, and analytics-style board overviews.
             </p>
             <div className="project-tech">
-              <span> React </span>
-              <span> Next.js </span>
-              <span> Typescript </span>
+              <span> Next.js 16 </span>
+              <span> React 19 </span>
+              <span> TypeScript </span>
+              <span> Supabase </span>
+              <span> Clerk </span>
+              <span> dnd-kit </span>
             </div>
           </div>
         </motion.div>
@@ -81,18 +84,19 @@ export const Projects = () => {
           >
           </motion.div>
           <div className="project-info">
-            <h3> Junior Full-Stack Developer Intern </h3>
+            <h3> Community Transport MERN Platform </h3>
             <p>
-              Contributed to a community-focused transportation web platform using the MERN stack, building responsive React interfaces and integrating them with RESTful APIs and a MongoDB backend.
+              Sole developer for a real-world community transport booking platform built as a Wintec final-year industry placement for a NZ non-profit.
             </p>
             <p>
-              Collaborated with a small team to implement new features, fix bugs, and improve UX, following Git-based workflows and code reviews.
+              Implemented a full MERN-stack app with user auth, real-time booking calendar, driver scheduling, and automated email notifications, deployed across Netlify and Railway.
             </p>
             <div className="project-tech">
               <span> React </span>
               <span> Node.js </span>
-              <span> MongoDB </span>
               <span> Express </span>
+              <span> MongoDB Atlas </span>
+              <span> Nodemailer </span>
             </div>
           </div>
         </motion.div>

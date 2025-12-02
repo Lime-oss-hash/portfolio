@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { Prism as SyntaxHighLighter } from "react-syntax-highlighter";
+import { FaGithub, FaLinkedin, FaDesktop } from "react-icons/fa";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const fadeInUp = {
@@ -105,7 +105,7 @@ export const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <SyntaxHighLighter
+          <SyntaxHighlighter
             style={vscDarkPlus}
             language="typescript"
             customStyle={{
@@ -138,7 +138,21 @@ export const Hero = () => {
     "Building production-ready web apps, one deploy and refactor at a time",
   availability: "Open to full‑time, freelance, and open‑source collabs",
 };`}
-          </SyntaxHighLighter>
+          </SyntaxHighlighter>
+        </motion.div>
+
+        <motion.div
+          className="floating-card"
+          animate={{ y: [0, -10, 0], rotate: [0, 2, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <div className="card-content">
+            <span className="card-icon"> <FaDesktop /> </span>
+            <span className="card-text">
+              {" "}
+              Currently working on something awesome!
+            </span>
+          </div>
         </motion.div>
       </div>
     </motion.section>

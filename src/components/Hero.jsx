@@ -3,12 +3,14 @@ import { FaGithub, FaLinkedin, FaDesktop } from "react-icons/fa";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
+// Animation variants for fading in elements
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.8, delay: 0.2 },
 };
 
+// Container variants for staggering children animations
 const staggerContainer = {
   initial: {},
   animate: {
@@ -28,12 +30,14 @@ export const Hero = () => {
       transition={{ duration: 0.8, delay: 0.2 }}
     >
       <div className="hero-container">
+        {/* Left Side: Text Content */}
         <motion.div
           className="hero-content"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
         >
+          {/* Welcome Badge */}
           <motion.div
             className="hero-badge"
             variants={fadeInUp}
@@ -46,6 +50,7 @@ export const Hero = () => {
             </span>
           </motion.div>
 
+          {/* Main Heading */}
           <motion.h1
             className="glitch"
             variants={fadeInUp}
@@ -66,6 +71,7 @@ export const Hero = () => {
             realtime sync.
           </motion.p>
 
+          {/* CTA Buttons */}
           <motion.div className="cta-buttons" variants={staggerContainer}>
             <motion.a
               href="#projects"
@@ -84,6 +90,8 @@ export const Hero = () => {
               Contact Me
             </motion.a>
           </motion.div>
+          
+          {/* Social Links */}
           <motion.div className="social-links" variants={staggerContainer}>
             <motion.a
               href="https://github.com/Lime-oss-hash"
@@ -99,12 +107,15 @@ export const Hero = () => {
             </motion.a>
           </motion.div>
         </motion.div>
+        
+        {/* Right Side: Code Snippet and Floating Card */}
         <motion.div
           className="hero-image-container"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
+          {/* Code Block Display */}
           <div className="code-display">
             <SyntaxHighlighter
               language="typescript"
@@ -140,6 +151,7 @@ export const Hero = () => {
             </SyntaxHighlighter>
           </div>
 
+          {/* Animated Floating Card */}
           <motion.div
             className="floating-card"
             animate={{ y: [0, -10, 0], rotate: [0, 2, 0] }}

@@ -24,12 +24,14 @@ const navItemVariants = {
 
 export const Navbar = () => {
   return (
+    // Navigation Bar with slide-down animation
     <motion.nav
       className="navbar"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
+      {/* Logo with hover effect */}
       <motion.div
         className="logo"
         whileHover={{ scale: 1.05 }}
@@ -38,6 +40,7 @@ export const Navbar = () => {
         Portfolio
       </motion.div>
 
+      {/* Navigation Links with staggered entrance */}
       <motion.ul
         className="nav-links"
         variants={staggerContainer}
@@ -49,8 +52,7 @@ export const Navbar = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href="#home" className="#hero" initial={{opacity: 0}} animate={{opacity: 1}}
-          transition={{duration: 0.8, delay: 0.2}}>Home</a>
+          <a href="#home" className="#hero">Home</a>
         </motion.li>
         <motion.li
           variants={navItemVariants}

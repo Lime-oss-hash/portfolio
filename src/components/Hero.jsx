@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import {Prism as SyntaxHighLighter} from "react-syntax-highlighter";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -98,6 +99,27 @@ export const Hero = () => {
               <FaLinkedin />
             </motion.a>
           </motion.div>
+        </motion.div>
+        <motion.div className="hero-image-container" initial={{opacity: 0, x: 50}} animate={{opacity: 1, x: 0}} 
+        transition={{duration: 0.8, delay: 0.4}}
+        >
+          <div className="code-display"></div>
+          <SyntaxHighLighter language="jsx" className="code-snippet">
+            {`import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+`}
+          </SyntaxHighLighter>
+
         </motion.div>
       </div>
     </motion.section>

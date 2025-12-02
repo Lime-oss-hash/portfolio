@@ -32,7 +32,7 @@ export const Hero = () => {
           animate="animate"
         >
           <motion.div
-            className="greeting"
+            className="hero-badge"
             variants={fadeInUp}
             initial="initial"
             animate="animate"
@@ -53,17 +53,35 @@ export const Hero = () => {
           >
             Sam Bai
           </motion.h1>
-
-          <motion.p
-            className="hero-subtitle"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            Full Stack Developer & UI/UX Enthusiast
+          <motion.h2 className="hero-subtitle" variants={fadeInUp}>
+            {" "}
+            Full Stack Developer
+          </motion.h2>
+          <motion.p className="hero-description" variants={fadeInUp}>
+            Full-stack engineer building modern, production-ready web apps with React, Next.js, TypeScript, Supabase, Clerk, and Tailwind—shipping real projects like a Trello-style Kanban with auth, RLS, and realtime sync.
           </motion.p>
+
+          <motion.div className="cta-buttons" variants={staggerContainer}>
+            <motion.a
+              href="#projects"
+              className="cta-primary"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Projects
+            </motion.a>
+            <motion.a
+              href="#contact"
+              className="cta-secondary"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact
+            </motion.a>
+          </motion.div>
         </motion.div>
       </div>
     </motion.section>
   );
 };
+

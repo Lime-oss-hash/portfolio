@@ -90,14 +90,12 @@ export const Hero = () => {
               target="_blank"
             >
               <FaGithub />
-              <span>GitHub</span>
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/sambai-dev"
+              href="https://www.linkedin.com/in/sam-bai-dev"
               target="_blank"
             >
               <FaLinkedin />
-              <span>LinkedIn</span>
             </motion.a>
           </motion.div>
         </motion.div>

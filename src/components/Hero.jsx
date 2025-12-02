@@ -105,22 +105,21 @@ export const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <SyntaxHighlighter
-            style={vscDarkPlus}
-            language="typescript"
-            customStyle={{
-              margin: 0,
-              padding: "1.5rem",
-              borderRadius: "1rem",
-              background: "rgba(30, 41, 59, 0.8)",
-              backdropFilter: "blur(10px)",
-              fontSize: "0.9rem",
-              border: "1px solid rgba(148, 163, 184, 0.1)",
-              marginBottom: 50,
-            }}
-            className="code-snippet"
-          >
-            {`const aboutMe: DeveloperProfile = {
+          <div className="code-display">
+            <SyntaxHighlighter
+              language="typescript"
+              customStyle={{
+                margin: 0,
+                padding: "2rem",
+                height: "100%",
+                borderRadius: "20px",
+                background: "rgba(30, 41, 59, 0.8)",
+                backdropFilter: "blur(10px)",
+                marginBottom: 50,
+              }}
+              style={vscDarkPlus}
+            >
+              {`const aboutMe: DeveloperProfile = {
   codename: "SamDev",
   origin: "🇳🇿 Hamilton-based, living in dark-mode tabs",
   role: "Full‑stack Web Engineer",
@@ -138,21 +137,22 @@ export const Hero = () => {
     "Building production-ready web apps, one deploy and refactor at a time",
   availability: "Open to full‑time, freelance, and open‑source collabs",
 };`}
-          </SyntaxHighlighter>
-        </motion.div>
-
-        <motion.div
-          className="floating-card"
-          animate={{ y: [0, -10, 0], rotate: [0, 2, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <div className="card-content">
-            <span className="card-icon"> <FaDesktop /> </span>
-            <span className="card-text">
-              {" "}
-              Currently working on something awesome!
-            </span>
+            </SyntaxHighlighter>
           </div>
+
+          <motion.div
+            className="floating-card"
+            animate={{ y: [0, -10, 0], rotate: [0, 2, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <div className="card-content">
+              <span className="card-icon"> <FaDesktop /> </span>
+              <span className="card-text">
+                {" "}
+                Currently working on something awesome!
+              </span>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </motion.section>

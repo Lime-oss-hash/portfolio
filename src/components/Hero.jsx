@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -58,7 +59,10 @@ export const Hero = () => {
             Full Stack Developer
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
-            Full-stack engineer building modern, production-ready web apps with React, Next.js, TypeScript, Supabase, Clerk, and Tailwind—shipping real projects like a Trello-style Kanban with auth, RLS, and realtime sync.
+            Full-stack engineer building modern, production-ready web apps with
+            React, Next.js, TypeScript, Supabase, Clerk, and Tailwind—shipping
+            real projects like a Trello-style Kanban with auth, RLS, and
+            realtime sync.
           </motion.p>
 
           <motion.div className="cta-buttons" variants={staggerContainer}>
@@ -68,7 +72,8 @@ export const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Projects
+              {""}
+              View My Work
             </motion.a>
             <motion.a
               href="#contact"
@@ -76,7 +81,23 @@ export const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Contact
+              Contact Me
+            </motion.a>
+          </motion.div>
+          <motion.div className="social-links" variants={staggerContainer}>
+            <motion.a
+              href="https://github.com/Lime-oss-hash"
+              target="_blank"
+            >
+              <FaGithub />
+              <span>GitHub</span>
+            </motion.a>
+            <motion.a
+              href="https://linkedin.com/in/sambai-dev"
+              target="_blank"
+            >
+              <FaLinkedin />
+              <span>LinkedIn</span>
             </motion.a>
           </motion.div>
         </motion.div>
@@ -84,4 +105,3 @@ export const Hero = () => {
     </motion.section>
   );
 };
-

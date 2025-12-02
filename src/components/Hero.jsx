@@ -116,6 +116,7 @@ export const Hero = () => {
               backdropFilter: "blur(10px)",
               fontSize: "0.9rem",
               border: "1px solid rgba(148, 163, 184, 0.1)",
+              marginBottom: 50,
             }}
             className="code-snippet"
           >

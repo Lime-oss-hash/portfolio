@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import {Prism as SyntaxHighLighter} from "react-syntax-highlighter";
-import {vscDarkPlus} from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { Prism as SyntaxHighLighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -57,7 +57,6 @@ export const Hero = () => {
             Sam Bai
           </motion.h1>
           <motion.h2 className="hero-subtitle" variants={fadeInUp}>
-            {" "}
             Full Stack Developer
           </motion.h2>
           <motion.p className="hero-description" variants={fadeInUp}>
@@ -74,7 +73,6 @@ export const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {""}
               View My Work
             </motion.a>
             <motion.a
@@ -101,33 +99,45 @@ export const Hero = () => {
             </motion.a>
           </motion.div>
         </motion.div>
-        <motion.div className="hero-image-container" initial={{opacity: 0, x: 50}} animate={{opacity: 1, x: 0}} 
-        transition={{duration: 0.8, delay: 0.4}}
+        <motion.div
+          className="hero-image-container"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="code-display"></div>
-          <SyntaxHighLighter style={vscDarkPlus} language="typescript">
-            {`
-              const aboutMe: DeveloperProfile = {
-                codename: "SamDev",
-                origin: "🇳🇿 Hamilton-based, living in dark-mode tabs",
-                role: "Full‑stack Web Engineer",
-                stack: {
-                  languages: ["TypeScript", "JavaScript", "SQL"],
-                  frameworks: ["React", "Next.js", "TailwindCSS", "Supabase", "Clerk"],
-                },
-                traits: [
-                  "shipping-real-world-SaaS",
-                  "AI-assisted problem solver",
-                  "clean-UI + clean-DB enjoyer",
-                  "late-night-debugging specialist",
-                ],
-                missionStatement:
-                  "Building production-ready web apps, one deploy and refactor at a time",
-                availability: "Open to full‑time, freelance, and open‑source collabs",
-              };
-              `}
+          <SyntaxHighLighter
+            style={vscDarkPlus}
+            language="typescript"
+            customStyle={{
+              margin: 0,
+              padding: "1.5rem",
+              borderRadius: "1rem",
+              background: "rgba(30, 41, 59, 0.8)",
+              backdropFilter: "blur(10px)",
+              fontSize: "0.9rem",
+              border: "1px solid rgba(148, 163, 184, 0.1)",
+            }}
+            className="code-snippet"
+          >
+            {`const aboutMe: DeveloperProfile = {
+  codename: "SamDev",
+  origin: "🇳🇿 Hamilton-based, living in dark-mode tabs",
+  role: "Full‑stack Web Engineer",
+  stack: {
+    languages: ["TypeScript", "JavaScript", "SQL"],
+    frameworks: ["React", "Next.js", "TailwindCSS", "Supabase", "Clerk"],
+  },
+  traits: [
+    "shipping-real-world-SaaS",
+    "AI-assisted problem solver",
+    "clean-UI + clean-DB enjoyer",
+    "late-night-debugging specialist",
+  ],
+  missionStatement:
+    "Building production-ready web apps, one deploy and refactor at a time",
+  availability: "Open to full‑time, freelance, and open‑source collabs",
+};`}
           </SyntaxHighLighter>
-
         </motion.div>
       </div>
     </motion.section>

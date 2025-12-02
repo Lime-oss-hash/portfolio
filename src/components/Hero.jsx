@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import {Prism as SyntaxHighLighter} from "react-syntax-highlighter";
+import {vscDarkPlus} from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -104,20 +105,27 @@ export const Hero = () => {
         transition={{duration: 0.8, delay: 0.4}}
         >
           <div className="code-display"></div>
-          <SyntaxHighLighter language="jsx" className="code-snippet">
-            {`import { useState } from 'react';
-
-function Counter() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div>
-      <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-    </div>
-  );
-}
-`}
+          <SyntaxHighLighter style={vscDarkPlus} language="typescript">
+            {`
+              const aboutMe: DeveloperProfile = {
+                codename: "SamDev",
+                origin: "🇳🇿 Hamilton-based, living in dark-mode tabs",
+                role: "Full‑stack Web Engineer",
+                stack: {
+                  languages: ["TypeScript", "JavaScript", "SQL"],
+                  frameworks: ["React", "Next.js", "TailwindCSS", "Supabase", "Clerk"],
+                },
+                traits: [
+                  "shipping-real-world-SaaS",
+                  "AI-assisted problem solver",
+                  "clean-UI + clean-DB enjoyer",
+                  "late-night-debugging specialist",
+                ],
+                missionStatement:
+                  "Building production-ready web apps, one deploy and refactor at a time",
+                availability: "Open to full‑time, freelance, and open‑source collabs",
+              };
+              `}
           </SyntaxHighLighter>
 
         </motion.div>

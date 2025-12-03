@@ -57,6 +57,12 @@ export const Contact = () => {
     });
 
     try {
+      console.log("Attempting to send email with keys:", {
+        serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      });
+
       // Send email using EmailJS
       await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -83,7 +89,10 @@ export const Contact = () => {
         message: "",
       });
     } catch (error) {
-      console.error(error);
+      console.error("EmailJS Error Details:", error);
+      if (error.text) {
+        console.error("Error Text:", error.text);
+      }
       // On error: update status to show error message
       setFormStatus({
         submitting: false,

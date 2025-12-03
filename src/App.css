@@ -85,7 +85,7 @@ body {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 500;
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
   position: relative;
   cursor: pointer;
 }
@@ -368,6 +368,30 @@ body {
   flex-direction: column;
 }
 
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient( 135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  
+  opacity: 0%;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.project-hard:hover.project-image::after {
+  transform: translateX(100%);
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-color);
+}
+
 .project-image {
   height: 240px;
   background-size: cover;
@@ -375,6 +399,33 @@ body {
   position: relative;
   overflow: hidden;
 }
+
+/* 
+  "Katana Shine" Effect Explanation:
+  1. The "Ghost" Layer (::after): Creates an invisible sheet on top of the image.
+  2. The "Light Beam" (background): Uses a gradient (transparent -> white -> transparent) to create a beam of light.
+  3. The "Slash" Angle (skewX): Tilts the beam -25deg to look like a diagonal slash/reflection.
+  4. The Animation: Starts off-screen left (-100%), and on hover, slides smoothly to the right (150%).
+*/
+.project-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  transition: none;
+  z-index: 1;
+}
+
+.project-card:hover .project-image::after {
+  left: 150%;
+  transition: left 0.7s ease-in-out;
+}
+
+
 
 .project-card h3 {
   padding: 1.5rem 1.5rem 0.5rem;
@@ -393,6 +444,16 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+
+.project-tech span {
+  padding: 0.3rem 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  color: var(--accent-color);
+  border: 1px solid rgba(244, 114, 182, 0.2);
 }
 
 

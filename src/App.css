@@ -55,7 +55,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5%;
+  padding: 1rem 5%;
   background-color: var(--nav-bg);
   backdrop-filter: blur(10px);
   z-index: 1000;
@@ -64,7 +64,7 @@ body {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--accent-color);
   text-shadow: 0 0 10px rgba(244, 114, 182, 0.3);
@@ -567,7 +567,36 @@ body {
   color: #cf2743;
 }
 
+/* Footer Styles */
+.footer {
+  background-color: var(--nav-bg);
+  padding: 2rem 5%;
+  border-top: 1px solid var(--card-border);
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
 
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
 
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
 
+.footer-links a {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
 
+.copyright {
+  color: var(--light-text);
+  font-size: 0.9rem;
+}

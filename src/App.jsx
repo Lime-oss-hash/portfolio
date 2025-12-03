@@ -5,6 +5,7 @@ import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(true);
@@ -16,9 +17,7 @@ function App() {
       <Hero />
       <Projects />
       <Contact />
-      <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Sam Bai. All rights reserved</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

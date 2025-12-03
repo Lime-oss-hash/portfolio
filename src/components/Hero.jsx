@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaDesktop } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDesktop, FaEnvelope, FaFileAlt } from "react-icons/fa";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
@@ -96,14 +96,33 @@ export const Hero = () => {
             <motion.a
               href="https://github.com/Lime-oss-hash"
               target="_blank"
+              whileHover={{ scale: 1.2, color: "#34d399" }}
+              whileTap={{ scale: 0.9 }}
             >
               <FaGithub />
             </motion.a>
             <motion.a
               href="https://www.linkedin.com/in/sam-bai-dev"
               target="_blank"
+              whileHover={{ scale: 1.2, color: "#34d399" }}
+              whileTap={{ scale: 0.9 }}
             >
               <FaLinkedin />
+            </motion.a>
+            <motion.a
+              href="mailto:sam2319667268@gmail.com"
+              whileHover={{ scale: 1.2, color: "#34d399" }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FaEnvelope />
+            </motion.a>
+            <motion.a
+              href="/resume.pdf"
+              download="Sam_Bai_Resume.pdf"
+              whileHover={{ scale: 1.2, color: "#34d399" }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FaFileAlt />
             </motion.a>
           </motion.div>
         </motion.div>

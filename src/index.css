@@ -1,4 +1,17 @@
+@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@theme {
+  --color-primary: #10b981;
+  --color-primary-dark: #047857;
+  --color-secondary: #06b6d4;
+  --color-accent: #34d399;
+  --color-text: #e2e8f0;
+  --color-text-light: #94a3b8;
+  --color-bg: #0f172a;
+  --color-section: #1e293b;
+  --color-card: #1e293b;
+}
 
 :root {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,

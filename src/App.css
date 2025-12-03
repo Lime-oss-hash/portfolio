@@ -332,15 +332,20 @@ body {
 
 /* Projects Sections */
 .projects {
-  padding: 6rem 5%;
+  padding: 0 5%;
   background-color: var(--background);
   position: relative;
+  min-height: 100vh; /* Make it cover full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
 }
 
 .projects h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
+  margin-top: 2rem; /* Add some top spacing if needed */
 }
 
 .project-grid {
@@ -448,7 +453,7 @@ body {
   border-radius: 50px;
   font-size: 0.8rem;
   color: var(--accent-color);
-  border: 1px solid rgba(244, 114, 182, 0.2);
+  border: 1px solid rgba(52, 211, 153, 0.3);
 }
 
 /* contact section */

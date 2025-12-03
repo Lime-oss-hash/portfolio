@@ -6,15 +6,10 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-    EmailJSResponseStatus.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-  }, []);
+  const [isLoaded, setIsLoaded] = useState(true);
 
   return (
-    <div className={`app ${isLoaded ? "loaded" : ""}`}>
+    <div className="app loaded">
       <Navbar />
       <Hero />
       <Projects />

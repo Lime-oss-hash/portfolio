@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <div className="app loaded">
+      <Analytics />
       <Navbar />
       <Hero />
       <Projects />

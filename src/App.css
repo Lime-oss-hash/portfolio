@@ -456,5 +456,29 @@ body {
   border: 1px solid rgba(244, 114, 182, 0.2);
 }
 
+/* contact section */
+
+.contact {
+  padding: 6rem 5%;
+  background: var(--section-bg);
+  position: relative;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
 

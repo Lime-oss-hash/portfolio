@@ -471,9 +471,8 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient( 90deg, transparent, var(--accent-color), transparent);
-  opacity: 0.1;
-  z-index: -1;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  opacity: 1;
 }
 
 .contact h2 {

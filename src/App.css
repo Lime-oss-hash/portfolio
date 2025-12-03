@@ -464,6 +464,18 @@ body {
   position: relative;
 }
 
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient( 90deg, transparent, var(--accent-color), transparent);
+  opacity: 0.1;
+  z-index: -1;
+}
+
 .contact h2 {
   text-align: center;
   font-size: 2.5rem;
@@ -483,19 +495,24 @@ body {
 
 .contact-form input, .contact-form textarea {
   padding: 1rem;
-  border: 2px solid var (--card-border);
+  border: 2px solid rgba(148, 163, 184, 0.1);
   border-radius: 0.5rem;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background: var (--card-bg);
-  color : var(--text-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  /* MODIFIED: Made background transparent to blend with section */
+  background: transparent; 
+  
+  color: var(--text-color);
+  box-shadow: none;
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 4px 12px  rgba(244, 114, 182, 0.2);
+  /* MODIFIED: Added subtle glow and slight background tint on focus for visibility */
+  box-shadow: 0 0 15px rgba(52, 211, 153, 0.1);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .contact-form textarea {

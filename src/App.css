@@ -552,6 +552,27 @@ body {
   transition: left 0.7s ease-in-out;
 }
 
+.form-status {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.form-status.success {
+  background: rgba(52, 211, 153, 0.2);
+  color: 1px solid rgba(15, 119, 81, 0.5);
+  color: #4ade80;
+}
+
+.form-status.error {
+  background: rgba(153, 15, 15, 0.2);
+  color: 1px solid rgba(65, 3, 17, 0.5);
+  color: #cf2743;
+}
+
+
 
 
 

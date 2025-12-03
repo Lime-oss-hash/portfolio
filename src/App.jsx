@@ -10,6 +10,7 @@ function App() {
 
   useEffect(() => {
     setIsLoaded(true);
+    EmailJSResponseStatus.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   }, []);
 
   return (

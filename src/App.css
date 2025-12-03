@@ -534,6 +534,23 @@ body {
   overflow: hidden;
 }
 
+.contact-submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  transition: none;
+  z-index: 1;
+}
+
+.contact-submit:hover::before {
+  left: 150%;
+  transition: left 0.7s ease-in-out;
+}
 
 
 
